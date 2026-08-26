@@ -1,0 +1,38 @@
+[project]
+name = "ailingo"
+version = "0.1.0"
+description = "A personal English coach that learns from the prompts you write to coding agents"
+readme = "README.md"
+authors = [
+    { name = "Kristian Klemon", email = "kristian.klemon@gmail.com" }
+]
+requires-python = ">=3.12"
+keywords = ["english", "tui", "textual", "coding-agents", "learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Education",
+]
+dependencies = [
+    "platformdirs>=4.11.4",
+    "pydantic-ai-slim[anthropic,google,openai]>=2.35.0",
+    "python-dotenv>=1.2.3",
+    "textual>=8.0",
+]
+
+[project.scripts]
+ailingo = "ailingo.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.24",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

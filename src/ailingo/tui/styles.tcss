@@ -1,0 +1,174 @@
+Screen {
+    background: $background;
+}
+
+.title {
+    text-style: bold;
+    color: $primary;
+    padding: 0 1;
+    height: auto;
+}
+.subtitle {
+    color: $text-muted;
+    padding: 0 1;
+    height: auto;
+}
+.muted { color: $text-muted; }
+.hidden { display: none; }
+.spacer { height: 1; }
+.error { color: $error; }
+.success { color: $success; }
+
+/* ------------------------------------------------------------ home */
+#home {
+    padding: 1 2;
+    height: 100%;
+}
+#home-stats {
+    height: auto;
+    margin: 1 0 0 0;
+}
+#home-level {
+    height: auto;
+    margin: 1 0 0 0;
+    padding: 0 1;
+}
+#home-level ProgressBar { width: 100%; }
+#home-status {
+    color: $text-muted;
+    padding: 0 1;
+    height: auto;
+    margin: 1 0 0 0;
+}
+#home-actions {
+    height: auto;
+    margin: 1 0 0 0;
+    padding: 0 1;
+}
+#home-actions Button { margin: 0 1 0 0; min-width: 22; }
+#home-spark {
+    height: 3;
+    margin: 0 1;
+}
+
+/* --------------------------------------------------------- session */
+#session {
+    padding: 1 2;
+    height: 100%;
+}
+#session-progress { width: 100%; margin: 0 1; }
+#card {
+    border: round $panel-lighten-2;
+    padding: 1 2;
+    margin: 1 0 0 0;
+    height: auto;
+}
+#card-kind { color: $secondary; text-style: bold; height: auto; }
+#card-prompt { margin: 1 0 0 0; height: auto; }
+#card-text {
+    margin: 1 0 0 0;
+    padding: 0 1;
+    border-left: thick $primary;
+    height: auto;
+    text-style: italic;
+}
+#answer-area { height: auto; margin: 1 0 0 0; }
+#answer-area Input { width: 100%; }
+#answer-area OptionList { height: auto; max-height: 12; }
+#answer-hint { color: $text-muted; height: auto; margin: 1 0 0 0; }
+#feedback {
+    border: round $secondary;
+    padding: 1 2;
+    margin: 1 0 0 0;
+    height: auto;
+}
+#feedback.correct { border: round $success; }
+#feedback.partial { border: round $warning; }
+#feedback.wrong { border: round $error; }
+#feedback-verdict { text-style: bold; height: auto; }
+#feedback-text { margin: 1 0 0 0; height: auto; }
+#feedback-improved { margin: 1 0 0 0; height: auto; color: $success; }
+#feedback-explanation { margin: 1 0 0 0; height: auto; color: $text-muted; }
+#feedback-actions { height: auto; margin: 1 0 0 0; }
+
+/* --------------------------------------------------------- summary */
+#summary {
+    padding: 1 2;
+    align: center top;
+}
+#summary-stats { height: auto; margin: 1 0; }
+#summary-actions { height: auto; }
+#summary-actions Button { margin: 0 1 0 0; }
+
+/* -------------------------------------------------------- patterns */
+#patterns {
+    height: 100%;
+}
+#patterns-table {
+    width: 46%;
+    height: 100%;
+}
+#patterns-detail {
+    width: 54%;
+    height: 100%;
+    border-left: solid $panel-lighten-2;
+    padding: 0 2;
+}
+
+/* ------------------------------------------------------------ sync */
+#sync {
+    padding: 1 2;
+    height: 100%;
+}
+#sync-log {
+    height: 1fr;
+    border: round $panel-lighten-2;
+    margin: 1 0;
+}
+#sync-progress { width: 100%; margin: 0 1; }
+#sync-actions { height: auto; }
+
+/* ------------------------------------------------ onboarding/settings */
+#wizard {
+    padding: 1 3;
+    height: 100%;
+}
+#step {
+    height: 1fr;
+    margin: 1 0;
+    padding: 0 1;
+    overflow-y: auto;
+}
+#step Input { width: 100%; margin: 0 0 1 0; }
+#step OptionList, #step RadioSet, #step SelectionList { width: 100%; height: auto; margin: 0 0 1 0; }
+#step .field-label { margin: 1 0 0 0; height: auto; color: $text-muted; }
+#nav { height: auto; }
+#nav Button { margin: 0 1 0 0; }
+
+#settings {
+    padding: 1 3;
+    height: 100%;
+}
+#settings-form {
+    height: 1fr;
+    padding: 0 1;
+}
+#settings-form Input { width: 100%; margin: 0 0 1 0; }
+#settings-form .field-label { margin: 1 0 0 0; height: auto; color: $text-muted; }
+#settings-form .row { height: auto; margin: 0 0 1 0; }
+#settings-form .row Label { width: 34; padding: 1 0 0 0; }
+#settings-actions { height: auto; margin: 1 0 0 0; }
+#settings-actions Button { margin: 0 1 0 0; }
+
+/* ---------------------------------------------------------- loading */
+LoadingScreen {
+    align: center middle;
+    background: $background 70%;
+}
+#loading-box {
+    width: 70;
+    height: auto;
+    border: round $primary;
+    background: $surface;
+    padding: 1 2;
+}
